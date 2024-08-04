@@ -33,7 +33,6 @@ stream = client.chat.completions.create(
 )
 # 遍历流式补全结果
 for chunk in stream:
-    # 如果没有补全结果，则跳过
     if not chunk.choices:
         continue
     # 打印补全结果
